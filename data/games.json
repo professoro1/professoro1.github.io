@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Space Runner",
+    "year": 2026,
+    "description": "Neon arcade action.",
+    "thumbnail": "assets/screenshots/game1.jpg",
+    "url": "games/2026-space-runner/"
+  },
+  {
+    "title": "Neon Dungeon",
+    "year": 2026,
+    "description": "Procedural dungeon crawler.",
+    "thumbnail": "assets/screenshots/game2.jpg",
+    "url": "games/2026-neon-dungeon/"
+  },
+  {
+    "title": "Castle Defense",
+    "year": 2025,
+    "description": "Tower defense strategy.",
+    "thumbnail": "assets/screenshots/game3.jpg",
+    "url": "games/2025-castle-defense/"
+  }
+]
