@@ -1,23 +1,20 @@
 [
   {
-    "title": "Space Runner",
+    "title": "Clicker Game Test",
     "year": 2026,
-    "description": "Neon arcade action.",
-    "thumbnail": "assets/screenshots/game1.jpg",
-    "url": "games/2026-space-runner/"
+    "description": "A tiny RPG.",
+    "url": "games/2026/testing-clicker/index.html"
   },
   {
-    "title": "Neon Dungeon",
+    "title": "Space Patrol",
     "year": 2026,
-    "description": "Procedural dungeon crawler.",
-    "thumbnail": "assets/screenshots/game2.jpg",
-    "url": "games/2026-neon-dungeon/"
+    "description": "Arcade shooter.",
+    "url": "games/2026/space-patrol/index.html"
   },
   {
-    "title": "Castle Defense",
+    "title": "Pixel Racer",
     "year": 2025,
-    "description": "Tower defense strategy.",
-    "thumbnail": "assets/screenshots/game3.jpg",
-    "url": "games/2025-castle-defense/"
+    "description": "Retro racing game.",
+    "url": "games/2025/pixel-racer/index.html"
   }
 ]
