@@ -1,21 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Library</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Games Archive</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header class="page-header">
+<header class="screen">
     <h1>GAME LIBRARY</h1>
-    <a href="index.html">Home</a>
 </header>
 
-<main id="games-container"></main>
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="games.html">GAMES</a>
+</nav>
 
-<script src="js/games.js"></script>
+<main id="games-container" class="screen">
+</main>
+
+<script>
+fetch("data/games.json")
+    .then(r => r.json())
+    .then(games => {
+
+        const container = document.getElementById("games-container");
+
+        const years = {};
+
+        games.forEach(game => {
+            if (!years[game.year]) years[game.year] = [];
+            years[game.year].push(game);
+        });
+
+        Object.keys(years)
+            .sort((a,b)=>b-a)
+            .forEach(year => {
+
+                const section = document.createElement("section");
+
+                section.innerHTML = `
+                    <h2>${year}</h2>
+                    <div class="game-grid"></div>
+                `;
+
+                const grid = section.querySelector(".game-grid");
+
+                years[year].forEach(game => {
+
+                    const card = document.createElement("a");
+
+                    card.className = "game-card";
+
+                    card.href = game.url;
+
+                    card.innerHTML = `
+                        <h3>${game.title}</h3>
+                        <p>${game.description}</p>
+                    `;
+
+                    grid.appendChild(card);
+                });
+
+                container.appendChild(section);
+            });
+    });
+</script>
 
 </body>
 </html>

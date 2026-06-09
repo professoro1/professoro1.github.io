@@ -1,141 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-:root {
-  --bg: #0b1020;
-  --card: #131c35;
-  --accent: #00ffe5;
-  --accent2: #ff00cc;
-  --text: #ffffff;
+:root{
+    --bg:#0f380f;
+    --mid:#306230;
+    --light:#8bac0f;
+    --bright:#9bbc0f;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Press Start 2P", cursive;
-  min-height: 100vh;
+body{
+    margin:0;
+    padding:20px;
+
+    background:var(--bg);
+    color:var(--light);
+
+    font-family:'Press Start 2P', monospace;
+
+    line-height:1.8;
 }
 
-.background-grid {
-  position: fixed;
-  inset: 0;
+.screen{
+    border:6px solid var(--light);
 
-  background-image:
-    linear-gradient(rgba(0,255,229,.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,229,.08) 1px, transparent 1px);
+    padding:20px;
 
-  background-size: 50px 50px;
+    background:#1b4a1b;
 
-  z-index: -1;
+    max-width:1000px;
+
+    margin:auto;
 }
 
-.hero {
-  text-align: center;
-  padding: 120px 20px;
+h1,h2,h3{
+    color:var(--bright);
 }
 
-.hero h1 {
-  font-size: 4rem;
-  color: var(--accent);
-  text-shadow:
-    0 0 10px var(--accent),
-    0 0 30px var(--accent);
+nav{
+    text-align:center;
+    margin:20px 0;
 }
 
-.hero p {
-  margin-top: 30px;
-  color: #ccc;
+nav a,
+.button{
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:var(--bg);
+
+    background:var(--bright);
+
+    padding:12px 18px;
+
+    margin:6px;
+
+    border:4px solid var(--light);
 }
 
-.hero-buttons {
-  margin-top: 50px;
+nav a:hover,
+.button:hover{
+    background:#c4d83d;
 }
 
-.btn {
-  display: inline-block;
-  padding: 15px 30px;
-  margin: 10px;
-  text-decoration: none;
-  color: black;
-  background: var(--accent);
-  border-radius: 8px;
-  transition: .2s;
+.game-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
 }
 
-.btn:hover {
-  transform: scale(1.05);
+.game-card{
+    display:block;
+
+    text-decoration:none;
+
+    color:var(--light);
+
+    border:4px solid var(--light);
+
+    padding:15px;
+
+    background:#234923;
 }
 
-.page-header {
-  padding: 40px;
-  text-align: center;
+.game-card:hover{
+    transform:translateY(-2px);
+
+    background:#2c5a2c;
 }
 
-.page-header h1 {
-  color: var(--accent);
+.game-frame{
+    width:100%;
+    height:700px;
+
+    border:4px solid var(--light);
+
+    background:black;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns:
-      repeat(auto-fit, minmax(280px, 1fr));
-
-  gap: 30px;
-  padding: 40px;
-}
-
-.game-card {
-  background: var(--card);
-
-  border: 2px solid var(--accent);
-
-  border-radius: 12px;
-
-  overflow: hidden;
-
-  transition: .2s;
-}
-
-.game-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 0 20px var(--accent);
-}
-
-.game-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.game-card h3 {
-  padding: 20px;
-  color: var(--accent);
-}
-
-.game-card p {
-  padding: 0 20px 20px;
-  font-size: 0.7rem;
-  line-height: 1.6;
-}
-
-.game-card a {
-  display: block;
-  text-align: center;
-  padding: 15px;
-  background: var(--accent2);
-  color: white;
-  text-decoration: none;
-}
-
-.year-title {
-  text-align: center;
-  margin-top: 60px;
-  color: var(--accent);
+footer{
+    text-align:center;
+    margin-top:30px;
 }
